@@ -26,6 +26,14 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
+    },
+    {
+      test: /\.scss$/,
+      loader: 'style!css!autoprefixer!sass'
+    },
+    {
+      test: /\.(jpe?g|png)$/,
+      loader: 'file-loader'
     }]
   }
 };
